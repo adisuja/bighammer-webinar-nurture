@@ -1,0 +1,55 @@
+Hi {{contact.first_name}},
+
+A nightly job fails at 3 AM. It retries. It fails again. Eventually it succeeds, the incident closes, and everyone moves on.
+
+The compute from the failed attempts is still on the bill.
+
+
+WHY FAILURE COST STAYS INVISIBLE
+
+Failed, timed-out and retried runs consume compute until they stop. A job with no timeout can run for hours before it gives up. A job with generous retries can repeat that several times in one night.
+
+Reliability tooling tracks the failure. It almost never tracks the cost of the failure. So the number that matters to finance never reaches the people who could fix it.
+
+THE ONE COST FIGURE THAT NEEDS NO ASSUMPTIONS
+
+Failed-run cost is unusual: it involves no estimates at all. The runs happened, they failed, and they were billed. That makes it the most defensible number you can put in front of a CFO.
+
+WITH failed AS (  -- one row per failed run (the timeline has many rows per run)
+  SELECT DISTINCT workspace_id, job_id, run_id
+  FROM system.lakeflow.job_run_timeline
+  WHERE result_state IN ('FAILED', 'TIMED_OUT')
+    AND period_start_time >= current_date() - INTERVAL 90 DAYS
+)
+SELECT f.job_id, COUNT(DISTINCT f.run_id) AS failed_runs,
+       SUM(u.usage_quantity * p.pricing.default) AS failed_cost
+FROM failed f
+JOIN system.billing.usage u
+  ON  u.workspace_id = f.workspace_id
+  AND u.usage_metadata.job_run_id = f.run_id
+JOIN system.billing.list_prices p
+  ON  u.sku_name = p.sku_name AND u.cloud = p.cloud
+  AND u.usage_unit = p.usage_unit
+  AND u.usage_start_time >= p.price_start_time
+  AND (p.price_end_time IS NULL OR u.usage_start_time < p.price_end_time)
+GROUP BY f.job_id
+ORDER BY failed_cost DESC
+
+CHECK IT YOURSELF THIS WEEK
+
+- Runs that ended FAILED or TIMED_OUT in the last 90 days.
+- What those runs cost, using the join above.
+- The jobs with the most repairs or retries.
+- Which of your jobs have no timeout set at all.
+
+The offline assessment measures failed-job cost for you, run by run: https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e08-assess-text
+
+Next: the four guardrails that make failure cheap and loud. It's usually the easiest finding to act on.
+
+Speak soon,
+Richard
+
+Richard Lawrence
+BigHammer.ai
+
+Unsubscribe: {{unsubscribe_link}}

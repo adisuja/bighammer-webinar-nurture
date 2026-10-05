@@ -1,0 +1,41 @@
+Hi {{contact.first_name}},
+
+Most teams we speak to want a Databricks cost assessment. Many of them stall before they start. Security wants to know what gets accessed. Procurement wants to know what's being installed. And nobody has time for weeks of workshops.
+
+So here is exactly what our offline assessment involves.
+
+
+HOW IT WORKS
+
+1. Import one notebook into your Databricks workspace.
+2. Attach a small classic cluster. A single-node cluster is enough (about 4 cores and 16 GB RAM). Serverless and SQL warehouses aren't used.
+3. Set two values: your workspace ID and a folder the cluster can write to.
+4. Run all. The notebook first checks it can read the system tables it needs and write to your folder. If a permission is missing, it tells you which one.
+5. Send us the zip. It contains CSV extracts only. No SQL, no secrets, no credentials.
+
+WHAT YOU GET BACK
+
+- Total Databricks cost over 90 days, at published list prices.
+- Cost by billing product.
+- Spend traced to jobs versus untraced.
+- Failed-job cost, measured.
+- Per-job and per-run cost tables.
+- Average worker CPU and Photon usage share.
+
+Connect your workspace afterwards and the assessment adds a classification of every job, from "keep on Databricks" to "migration candidate". More on that in a few weeks.
+
+Run the offline assessment: https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e11-assess-text
+
+If you'd rather not run it yourself, book a walkthrough and we'll do it with you on a call.
+
+Book a 30-minute walkthrough: https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e11-book-text
+
+Next: the questions your security team will ask, answered in a format you can forward.
+
+Until next time,
+Richard
+
+Richard Lawrence
+BigHammer.ai
+
+Unsubscribe: {{unsubscribe_link}}
