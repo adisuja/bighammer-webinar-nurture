@@ -9,7 +9,7 @@ Not benchmarked, not "typical for companies like you". Measured, from your billi
 
 2. WHICH PARTS WERE ASSUMED, AND AT WHAT RATE?
 
-An estimate is fine. A hidden assumption isn't. Ask for the rate and the rule: "we assumed 40% of this cluster's time is idle because its p95 CPU is under 40%" is checkable. "Typically 30 to 50%" is not.
+An estimate is fine. A hidden assumption isn't. Ask for the rate and the rule: "we assumed this cluster can drop from 8 to 4 workers because its 30-day p95 CPU is 32%" is checkable. "Typically 30 to 50%" is not.
 
 3. WHAT'S EXCLUDED?
 
@@ -33,4 +33,5 @@ Richard
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

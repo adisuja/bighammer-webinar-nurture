@@ -13,20 +13,21 @@ The good news: Databricks already records what your clusters were doing, in syst
 
 WHY THE 95TH PERCENTILE MATTERS
 
-An average can hide a spike. A cluster that averages 18% because it hit 95% for four minutes needs better autoscaling. A cluster that never goes above 30% needs a smaller size. Same average, different fix.
+An average can hide a spike. A cluster that averages 18% because of short bursts to 95% needs better autoscaling. A cluster that never goes above 30% needs a smaller size. Same average, different fix. The 95th percentile shows sustained load, and the maximum shows the spikes.
 
 SELECT cluster_id,
-       AVG(cpu_user_percent + cpu_system_percent) AS avg_cpu,
-       PERCENTILE(cpu_user_percent + cpu_system_percent, 0.95) AS p95_cpu,
-       (MAX(end_time)::LONG - MIN(start_time)::LONG) / 60 AS observed_minutes
+       COUNT(DISTINCT date_trunc('minute', start_time)) AS observed_minutes,
+       AVG(cpu_user_percent + cpu_system_percent)  AS avg_cpu,
+       percentile_approx(cpu_user_percent + cpu_system_percent, 0.95) AS p95_cpu,
+       MAX(cpu_user_percent + cpu_system_percent)  AS max_cpu
 FROM system.compute.node_timeline
 WHERE driver = false
   AND start_time >= current_date() - INTERVAL 30 DAYS
 GROUP BY cluster_id
-HAVING avg_cpu < 20 AND p95_cpu < 40
+HAVING observed_minutes >= 30 AND avg_cpu < 20 AND p95_cpu < 40
 ORDER BY avg_cpu
 
-(observed_minutes is the span between first and last sample, a rough guide. Filter out anything under 30 minutes.)
+Read max_cpu alongside the others. A low p95 with a high max means short spikes: fix autoscaling. A low p95 and a low max means the cluster is simply too big: downsize. (Single-node clusters have no workers, so they won't appear. Serverless and SQL warehouses aren't in this table.)
 
 CHECK IT YOURSELF THIS WEEK
 
@@ -51,4 +52,5 @@ Richard
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

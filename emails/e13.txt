@@ -1,6 +1,6 @@
 Hi {{contact.first_name}},
 
-Every vendor in this space promises savings. Thirty percent. Fifty. Seventy-five. After a while, leadership stops listening, and they're right to.
+Every vendor in this space promises savings, and our own masterclass title said "up to 75%". So it's fair to ask what has to be true before any number like that deserves a hearing.
 
 Most savings claims fall apart under three questions: what was actually measured, what was assumed, and what was left out.
 
@@ -39,4 +39,5 @@ Richard
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

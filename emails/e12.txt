@@ -5,34 +5,34 @@ This one is written to be forwarded. If your security or platform team needs to 
 
 WHAT THE ASSESSMENT READS
 
-Read-only access to seven Databricks system tables: lakeflow.jobs, lakeflow.job_run_timeline, lakeflow.job_task_run_timeline, billing.usage, billing.list_prices, compute.clusters and compute.node_timeline. Nothing is written to your workspace except the output folder you choose.
+Read-only access to seven Databricks system tables: lakeflow.jobs, lakeflow.job_run_timeline, lakeflow.job_task_run_timeline, billing.usage, billing.list_prices, compute.clusters and compute.node_timeline. The queries are published in full on the assessment page, so your team can read every line before anything runs.
 
 THE QUESTIONS WE ALWAYS GET
 
 Does BigHammer get access to our workspace?
-No. The notebook runs under your own cluster identity, inside your environment.
+No. Your own team runs the queries, in your own SQL warehouse session, under your own identity.
 
 Is anything installed?
-No. It's a single notebook. No libraries, agents or service principals.
+No. It's plain SQL. No libraries, agents or service principals.
+
+What does it write?
+One temporary view, and one result table per query in a catalog and schema you choose. Nothing else is created or changed.
 
 What data leaves our environment?
-Aggregated usage, run and cost data in CSV form, which you can open and inspect before sending. No source code, no table data, no secrets.
-
-Can it change anything?
-No. It only reads system tables.
+Only the CSV files you export: job names and IDs, run and task records, priced usage rows, cluster configuration (including tags), and CPU and memory samples. No table data, no source code, no secrets or tokens. Open every file before you send it.
 
 What compute does it use?
-A small single-node classic cluster you attach. No serverless, no SQL warehouse.
+One SQL warehouse session for the duration of the queries.
 
-IN ONE LINE FOR THE APPROVAL TICKET: A read-only notebook that runs under our own identity, reads seven system tables, and writes CSV extracts we review before anything is shared.
+IN ONE LINE FOR THE APPROVAL TICKET: Seven published, read-only SQL queries, run by our own team in our own SQL warehouse, saving results to a schema we choose. We review the CSV extracts before anything is shared.
 
-If your team would like to see the notebook before approving it, we're happy to walk them through it line by line.
+The optional connected assessment, which adds job-by-job classification, is a separate step with its own approval. Nothing above changes unless you choose it.
 
-Book a walkthrough for your security team: https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e12-book-text
+Request a walkthrough for your security team: https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e12-book-text
 
-Or go straight to the offline assessment: https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e12-assess-text
+Or read the queries on the assessment page: https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e12-assess-text
 
-Has security been the blocker for cost work in your organisation before? Reply and tell me what they asked. It shapes how we document this.
+Has security been the blocker for cost work in your organisation before? Reply and tell me what they asked.
 
 Speak soon,
 Richard
@@ -40,4 +40,5 @@ Richard
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

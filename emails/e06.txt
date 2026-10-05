@@ -27,7 +27,7 @@ When you've run it, the report ends with what it can't see: contract discounts, 
 
 Book a walkthrough of your X-Ray results: https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e06-book-text
 
-If you run it, reply with the one number that surprised you most. I'm collecting them (anonymously) for a future email.
+If you run it, reply with the one number that surprised you most.
 
 All the best,
 Richard
@@ -35,4 +35,5 @@ Richard
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

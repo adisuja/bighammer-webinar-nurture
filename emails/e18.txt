@@ -1,6 +1,6 @@
 Hi {{contact.first_name}},
 
-Last time I suggested listing your 20 most expensive jobs and what they rely on. Here's how we turn that list into decisions.
+If you made the list of your 20 most expensive jobs, here's how we turn it into decisions.
 
 TWO SCORES PER JOB
 
@@ -37,4 +37,5 @@ Richard
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

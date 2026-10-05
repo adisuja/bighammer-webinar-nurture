@@ -1,29 +1,32 @@
 Hi {{contact.first_name}},
 
-So far this series has been about your numbers. Today I want to share someone else's words.
+In my first email I asked when your next Databricks renewal or commit discussion is. Here's why the date matters so much.
 
 
-Anushka is the Founder and CEO of SBC Labs. Here's how she described working with us:
+The evidence that strengthens a renewal takes time to build. Thirty days out, you can only argue about price. Six months out, you can change what you're committing to.
 
-> "BigHammer transformed a multi-year data engineering challenge into a production-ready platform in months, without requiring a technical team."
+WHAT TO HAVE READY, AND WHEN
 
-Three parts of that sentence are worth pausing on, because they come up in almost every conversation we have:
+- 180 days out: a 90-day baseline and your traced percentage.
+- 120 days out: your top 10 jobs with owners, and failed-run cost.
+- 90 days out: a full assessment, with measured and estimated figures separated.
+- 60 days out: a job-by-job classification and a keep-versus-move list.
+- 30 days out: a negotiation pack built on evidence, not the invoice.
 
-- Multi-year. Most data platform problems aren't new. They've been on the roadmap for a long time because nobody has the capacity to finish them.
-- Months. The timeline changes when the repetitive engineering work is automated rather than hand-built.
-- Without requiring a technical team. BigHammer's agents generate, test and deploy the pipelines, so the work doesn't wait for a hiring plan.
+WHAT THAT LOOKS LIKE IN PRACTICE
 
-If you've got a data problem that has sat on the roadmap for longer than anyone would like, it's worth 30 minutes to find out whether it needs to.
+In the masterclass, Srinath shared a healthcare client who went through optimisation and migration with us: more than $3M a year in cost avoidance, and over 400% ROI.
 
-Book a 30-minute call: https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e10-book-text
+If your renewal is within the next six months, now is the moment. A 30-minute call is enough to tell you where you are on the timeline and what to do first.
 
-We'll look at what's stuck, what it's costing you, and whether we can move it. If we can't help, you'll hear that from us directly.
+Book 30 minutes before your renewal: https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e10-book-text
 
 Richard
 
-P.S. What's the data project that has been "next quarter" for longest in your team? Reply and tell me. No pitch, I'm genuinely curious.
+P.S. If your renewal is more than six months away, you have the best possible position. Start with the offline assessment (https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e10-assess-text) and you'll walk into that conversation with everything above.
 
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

@@ -11,11 +11,11 @@ Three system tables do almost all of the work:
 
 THE DETAIL THAT TRIPS PEOPLE UP
 
-Prices change over time, so the join to list_prices has to respect the window in which each price was valid. Join on SKU alone and you'll double-count rows whenever a price changed during your 90 days. Here's the core of it:
+list_prices keeps the full price history for every SKU, so the join has to respect the window in which each price was valid. Join on SKU alone and every usage row is multiplied by every price that SKU has ever had. Here's the core of it:
 
 SELECT u.usage_date, u.sku_name,
-       u.usage_metadata.job_id,
-       u.usage_quantity * p.pricing.default AS list_cost
+       u.workspace_id, u.usage_metadata.job_id,
+       u.usage_quantity * p.pricing.effective_list.default AS list_cost
 FROM system.billing.usage u
 JOIN system.billing.list_prices p
   ON  u.sku_name   = p.sku_name
@@ -25,7 +25,7 @@ JOIN system.billing.list_prices p
   AND (p.price_end_time IS NULL OR u.usage_start_time < p.price_end_time)
 WHERE u.usage_date >= current_date() - INTERVAL 90 DAYS
 
-Group that by job_id and you have your top jobs by cost. Group by sku_name and you have the invoice, explained.
+Group that by workspace_id and job_id and you have your top jobs by cost (the empty job_id group is your untraced spend). Group by sku_name and you have the invoice, explained. These are list prices, before any contract discount.
 
 THE FULL SET, FREE
 
@@ -37,7 +37,7 @@ Open the Field Guide: https://adisuja.github.io/bighammer-cost-field-guide/?utm_
 
 All the queries are read-only. Run them in a Databricks SQL editor or a notebook with access to system tables.
 
-Which query would you run first? Reply and tell me. I read every answer.
+Which query would you run first? Reply and tell me.
 
 Until next time,
 Richard
@@ -45,4 +45,5 @@ Richard
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

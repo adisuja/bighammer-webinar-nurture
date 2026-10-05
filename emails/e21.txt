@@ -1,6 +1,6 @@
 Hi {{contact.first_name}},
 
-Last time: both runs succeeded and the data didn't match. Here's the checklist that catches it, in the order we run it.
+Both runs succeeded and the data didn't match. Here's the checklist that catches it, in the order we run it.
 
 
 THE FIVE CHECKS
@@ -12,11 +12,13 @@ THE FIVE CHECKS
 5. Row-level comparison. By business key, or by hash when there's no clean key.
 
 -- rows in the original output that the migrated output doesn't have
-SELECT * FROM original.orders_daily
+SELECT order_id, customer_id, ROUND(amount, 2) AS amount, order_date
+FROM original.orders_daily
 EXCEPT ALL
-SELECT * FROM migrated.orders_daily
+SELECT order_id, customer_id, ROUND(amount, 2) AS amount, order_date
+FROM migrated.orders_daily
 
-Run it both ways round. Zero rows in both directions is parity at row level.
+List the columns explicitly (set operations match by position), round floating-point measures to the tolerance you agreed, and run it both ways round. Zero rows in both directions is parity at row level.
 
 WHAT GOOD LOOKS LIKE
 
@@ -39,4 +41,5 @@ Richard
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

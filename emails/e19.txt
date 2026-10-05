@@ -11,7 +11,7 @@ ON THE CALL WE'LL
 - Place it in one of the five outcomes: keep, migrate, optimise then evaluate, evaluate or defer.
 - Tell you why, in plain terms, and what the next step would be.
 
-You leave with three decisions you can defend, whether or not you ever work with us.
+You leave with three decisions you can defend, and they're yours to keep.
 
 WHY THREE?
 
@@ -26,4 +26,5 @@ P.S. If you've already run the offline assessment (https://assessment.bighammero
 Richard Lawrence
 BigHammer.ai
 
+BigHammer.ai Inc., 5900 Balcones Drive # 29129, Austin, TX 78731
 Unsubscribe: {{unsubscribe_link}}

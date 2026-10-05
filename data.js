@@ -72,7 +72,7 @@ window.SEQ = [
   "kind": "Lead magnet",
   "step": 1,
   "label": "Step 1 of 8",
-  "subject": "The join most Databricks teams never write (free guide inside)",
+  "subject": "The join most Databricks teams never write",
   "preheader": "Three system tables, one join, and your invoice finally has names on it.",
   "alt": "Diagram of system.billing.usage joined to system.billing.list_prices and system.lakeflow.job_run_timeline",
   "links": [
@@ -100,7 +100,7 @@ window.SEQ = [
   "kind": "Book a call",
   "step": null,
   "label": "30-minute call",
-  "subject": "What actually happens in the 30 minutes",
+  "subject": "What happens on a 30-minute BigHammer call",
   "preheader": "No slide deck. You leave with three things, whether or not we ever speak again.",
   "alt": "Richard Lawrence at his desk, with the three-part agenda of a 30-minute BigHammer walkthrough",
   "links": [
@@ -110,7 +110,7 @@ window.SEQ = [
     "url": "https://bighammer.ai/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e04-site-signature"
    },
    {
-    "label": "Pick a time that suits you",
+    "label": "Request your 30-minute call",
     "slug": "book-button",
     "url": "https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e04-book-button"
    },
@@ -161,7 +161,7 @@ window.SEQ = [
   "kind": "Lead magnet",
   "step": 2,
   "label": "Step 2 of 8",
-  "subject": "Free tool: an X-Ray of your Databricks spend in 10 minutes",
+  "subject": "An X-Ray of your Databricks spend, in your browser",
   "preheader": "Run three read-only queries, drop in the CSVs, get a report. Nothing leaves your browser.",
   "alt": "Screenshot of the free BigHammer Databricks Cost X-Ray report showing baseline, traced spend and failed-run cost",
   "links": [
@@ -283,9 +283,9 @@ window.SEQ = [
   "kind": "Book a call",
   "step": null,
   "label": "30-minute call",
-  "subject": "\"Production-ready in months, without a technical team\"",
-  "preheader": "What Anushka, Founder and CEO of SBC Labs, said about working with BigHammer.",
-  "alt": "Testimonial card: Anushka, Founder and CEO of SBC Labs, on BigHammer turning a multi-year data engineering challenge into a production-ready platform in months",
+  "subject": "Renewals are won six months early",
+  "preheader": "What to have ready at 180, 90 and 30 days before your Databricks commit.",
+  "alt": "Countdown timeline from 180 days before renewal to the commit date, with the evidence to have ready at each milestone",
   "links": [
    {
     "label": "bighammer.ai (signature)",
@@ -293,9 +293,14 @@ window.SEQ = [
     "url": "https://bighammer.ai/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e10-site-signature"
    },
    {
-    "label": "Book a 30-minute call",
+    "label": "Book 30 minutes before your renewal",
     "slug": "book-button",
     "url": "https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e10-book-button"
+   },
+   {
+    "label": "offline assessment",
+    "slug": "assess-inline",
+    "url": "https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e10-assess-inline"
    },
    {
     "label": "bighammer.ai (footer)",
@@ -312,8 +317,8 @@ window.SEQ = [
   "step": 4,
   "label": "Step 4 of 8",
   "subject": "Step 4/8: What a Databricks assessment actually involves",
-  "preheader": "1 notebook. 7 system tables. 90 days. 0 credentials shared.",
-  "alt": "Five steps of the offline assessment: import a notebook, attach a small cluster, set two values, run all, send the CSV zip",
+  "preheader": "7 read-only queries. 7 system tables. 90 days. 0 credentials shared.",
+  "alt": "Five steps of the offline assessment: open a SQL warehouse session, set two values, run seven read-only queries in order, export to CSV, zip and send",
   "links": [
    {
     "label": "bighammer.ai (signature)",
@@ -321,12 +326,12 @@ window.SEQ = [
     "url": "https://bighammer.ai/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e11-site-signature"
    },
    {
-    "label": "Run the offline assessment",
+    "label": "Get the assessment queries",
     "slug": "assess-button",
     "url": "https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e11-assess-button"
    },
    {
-    "label": "Book a 30-minute walkthrough",
+    "label": "Request a 30-minute walkthrough",
     "slug": "book-link",
     "url": "https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e11-book-link"
    },
@@ -345,8 +350,8 @@ window.SEQ = [
   "step": 4,
   "label": "Step 4 of 8",
   "subject": "Forward this to your security team",
-  "preheader": "What the assessment reads, what leaves your environment, and what never does.",
-  "alt": "Data boundary diagram: the notebook reads seven system tables inside your workspace, you inspect a CSV zip, and nothing comes back in",
+  "preheader": "What the assessment reads, what it writes, and exactly what leaves your environment.",
+  "alt": "Data boundary diagram: seven read-only queries run in your SQL warehouse, results are saved in your own schema, you inspect the CSV zip, and nothing comes back in",
   "links": [
    {
     "label": "bighammer.ai (signature)",
@@ -354,12 +359,12 @@ window.SEQ = [
     "url": "https://bighammer.ai/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e12-site-signature"
    },
    {
-    "label": "Book a walkthrough for your security team",
+    "label": "Request a walkthrough for your security team",
     "slug": "book-button",
     "url": "https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e12-book-button"
    },
    {
-    "label": "Or go straight to the offline assessment",
+    "label": "Or read the queries on the assessment page",
     "slug": "assess-link",
     "url": "https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e12-assess-link"
    },
@@ -378,7 +383,7 @@ window.SEQ = [
   "step": 5,
   "label": "Step 5 of 8",
   "subject": "Step 5/8: We start with what's measured",
-  "preheader": "Thirty percent. Fifty. Seventy-five. Leadership stopped listening, and they were right to.",
+  "preheader": "Most savings claims fall apart under three questions. Here they are.",
   "alt": "Two-column ledger: measured figures on the left, estimated opportunities with their method on the right, untraced spend shown separately",
   "links": [
    {
@@ -476,7 +481,7 @@ window.SEQ = [
     "url": "https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e16-book-button"
    },
    {
-    "label": "offline assessment",
+    "label": "assessment queries",
     "slug": "assess-inline",
     "url": "https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e16-assess-inline"
    },
@@ -496,7 +501,7 @@ window.SEQ = [
   "label": "Step 7 of 8",
   "subject": "Step 7/8: \"Should we leave Databricks?\" is the wrong question",
   "preheader": "It forces an all-or-nothing answer. Neither answer is right.",
-  "alt": "AI-generated illustration of a chef in a fine-dining kitchen carefully plating a slice of plain toast",
+  "alt": "A chef in a fine-dining kitchen carefully plating a single slice of plain toast",
   "links": [
    {
     "label": "bighammer.ai (signature)",
@@ -687,9 +692,9 @@ window.SEQ = [
   "kind": "Book a call",
   "step": null,
   "label": "30-minute call",
-  "subject": "Renewals are won six months early",
-  "preheader": "What to have ready at 180, 90 and 30 days before your Databricks commit.",
-  "alt": "Countdown timeline from 180 days before renewal to the commit date, with the evidence to have ready at each milestone",
+  "subject": "What SBC Labs' founder said about working with BigHammer",
+  "preheader": "What Anushka, Founder and CEO of SBC Labs, said about working with BigHammer.",
+  "alt": "Testimonial card: Anushka, Founder and CEO of SBC Labs, on BigHammer turning a multi-year data engineering challenge into a production-ready platform in months",
   "links": [
    {
     "label": "bighammer.ai (signature)",
@@ -697,14 +702,9 @@ window.SEQ = [
     "url": "https://bighammer.ai/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e23-site-signature"
    },
    {
-    "label": "Book 30 minutes before your renewal",
+    "label": "Book a 30-minute call",
     "slug": "book-button",
     "url": "https://bighammer.ai/book-demo/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e23-book-button"
-   },
-   {
-    "label": "offline assessment",
-    "slug": "assess-inline",
-    "url": "https://assessment.bighammerops.com/?utm_source=newsletter&utm_medium=email&utm_campaign=dbx-webinar-nurture-2026&utm_content=e23-assess-inline"
    },
    {
     "label": "bighammer.ai (footer)",
