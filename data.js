@@ -228,7 +228,7 @@ window.SEQ = [
   "step": 3,
   "label": "Step 3 of 8",
   "subject": "Step 3/8: The 3 AM failure is still on your bill",
-  "preheader": "The incident closed. The compute from the failed attempts didn't go anywhere.",
+  "preheader": "The incident closed. The compute from the failed runs didn't go anywhere.",
   "alt": "Timeline of a nightly job: two failed attempts shaded red as billed but producing nothing, then a successful retry",
   "links": [
    {

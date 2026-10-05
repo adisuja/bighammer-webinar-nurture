@@ -15,7 +15,7 @@ THE MOST DEFENSIBLE NUMBER YOU HAVE
 
 Failed-run cost is unusual: it needs no assumptions about what might be saved. The runs happened, they failed, and they were billed. Measured runs, priced at list: that's the most defensible number you can put in front of a CFO.
 
-WITH runs AS (  -- final state per run (the timeline has many rows per run)
+WITH runs AS (
   SELECT workspace_id, job_id, run_id,
          MAX_BY(result_state, period_end_time)
            FILTER (WHERE result_state IS NOT NULL) AS final_state
@@ -39,6 +39,8 @@ JOIN system.billing.list_prices p
   AND (p.price_end_time IS NULL OR u.usage_start_time < p.price_end_time)
 GROUP BY ALL
 ORDER BY failed_cost DESC
+
+runs keeps one final state per run, because the timeline table stores many rows for each run.
 
 CHECK IT YOURSELF THIS WEEK
 
