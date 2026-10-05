@@ -2,7 +2,7 @@
 <title>BigHammer.ai · Webinar nurture sequence (24 emails)</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="brand/bighammer-icon-dark.svg">
-<link rel="stylesheet" href="brand/brand.css?v=5">
+<link rel="stylesheet" href="brand/brand.css?v=6">
 <style>
 :root{--side:380px}
 body{background:#F4F2FA;min-height:100vh}
@@ -85,7 +85,7 @@ table.links code{font-family:var(--font-mono);font-size:12px;word-break:break-al
   </div>
  </main>
 </div>
-<script src="data.js?v=5"></script>
+<script src="data.js?v=6"></script>
 <script>
 const S=window.SEQ, $=s=>document.querySelector(s);
 let cur=1, tab='email', filt='All';
@@ -104,11 +104,11 @@ function show(){const e=S[cur-1],id='e'+String(cur).padStart(2,'0');
  $('#inboxrow').innerHTML=`<b>Richard Lawrence</b><span><b>${e.subject}</b> <span class="pre">: ${e.preheader}</span></span><span class="tag">Inbox preview</span>`;
  $('#subj').textContent=e.subject;
  const P=$('#pane');
- if(tab==='email'||tab==='mobile'){P.innerHTML=`<div class="frame ${tab==='mobile'?'mobile':''}"><iframe id="f" src="emails/${id}.html?v=5" title="email"></iframe></div>`;
+ if(tab==='email'||tab==='mobile'){P.innerHTML=`<div class="frame ${tab==='mobile'?'mobile':''}"><iframe id="f" src="emails/${id}.html?v=6" title="email"></iframe></div>`;
   const f=$('#f');f.onload=()=>{try{f.style.height=(f.contentDocument.documentElement.scrollHeight+20)+'px'}catch(x){}}}
- else if(tab==='text'){fetch(`emails/${id}.txt?v=5`).then(r=>r.text()).then(t=>{P.innerHTML='<pre class="txt"></pre>';P.firstChild.textContent=t})}
+ else if(tab==='text'){fetch(`emails/${id}.txt?v=6`).then(r=>r.text()).then(t=>{P.innerHTML='<pre class="txt"></pre>';P.firstChild.textContent=t})}
  else if(tab==='links'){P.innerHTML=`<table class="links"><tr><th>Link</th><th>utm_content</th><th>Full URL</th></tr>${e.links.map(l=>`<tr><td>${l.label}</td><td><code>${l.slug}</code></td><td><a href="${l.url}" target="_blank"><code>${l.url}</code></a></td></tr>`).join('')}</table>`}
- else {P.innerHTML=`<div class="visual"><img src="img/${id}.jpg?v=5" alt="${e.alt}"><p>${e.alt}</p></div>`}
+ else {P.innerHTML=`<div class="visual"><img src="img/${id}.jpg?v=6" alt="${e.alt}"><p>${e.alt}</p></div>`}
 }
 $('#planlink').onclick=ev=>{ev.preventDefault();const rows=S.map(e=>`<tr><td>${e.n}</td><td>Week ${e.week}</td><td>Day ${e.day}</td><td>${e.kind}</td><td>${e.subject}</td></tr>`).join('');
  $('#pane').innerHTML=`<table class="links"><tr><th>#</th><th>Week</th><th>Day</th><th>Type</th><th>Subject</th></tr>${rows}</table>`;$('#subj').textContent='Send schedule (day 0 = the day after the webinar)';$('#inboxrow').innerHTML='<b>Schedule</b>';$('#meta').innerHTML=''};
